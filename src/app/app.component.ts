@@ -1,21 +1,13 @@
-import {Component, ViewChild, AfterViewInit, ElementRef} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   title = 'Template';
 
-  @ViewChild('someInput') someInput: ElementRef;
+  show = true;
 
-  ngAfterViewInit() {
-  }
-
-  appendChild(): void {
-    if (this.someInput.nativeElement !== undefined && this.someInput.nativeElement !== null) {
-      this.someInput.nativeElement.value = 'Anchovies! 🍕🍕';
-    }
-  }
 }

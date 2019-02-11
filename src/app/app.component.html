@@ -1,3 +1,9 @@
-<h1> Welcome to {{ title }}! </h1>
+<h1> {{ title }}! </h1>
 
-<input #someInput placeholder="Your favorite pizza toping" (click)="appendChild()">
+<button (click)="show = !show">
+    {{ show ? 'Hide time in AMPM format' : 'Show time in AMPM format' }}
+</button>
+<p></p>
+<ng-container *ngIf="show">
+    <app-child-component></app-child-component>
+</ng-container>
